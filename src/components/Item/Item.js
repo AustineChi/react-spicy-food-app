@@ -12,26 +12,23 @@ import {
 
 const Item = ({ item, orderItems, setOrderItems }) => {
     return (
-        <ItemsContainer key={item.id} data-test-id="item">
+        <ItemsContainer key={item.id} >
             <ItemInfo>
-                <ItemHeading data-test-id={`item-heading-${item.id}`}>
+                <ItemHeading>
                     {item.name}
                     <span
                         role="img"
                         aria-label="spice"
-                        data-test-id={`spice-${item.id}`}
                     >
                         {spiceEmoji(item.spice)}
                     </span>
                 </ItemHeading>
 
                 <ItemInfoDescription
-                    data-test-id={`item-description-${item.id}`}
                 >
                     {item.desc}
                 </ItemInfoDescription>
                 <Button
-                    data-test-id={`add-item-${item.id}`}
                     type="button"
                     onClick={() => {
                         if (
@@ -52,7 +49,6 @@ const Item = ({ item, orderItems, setOrderItems }) => {
                 </Button>
             </ItemInfo>
             <ItemImage
-                data-test-id={`image-${item.id}`}
                 src={item.image}
                 alt={item.name}
             />

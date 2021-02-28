@@ -13,7 +13,7 @@ export const App = () => {
   return (
     <Main>
       <Header>
-          <h1 data-test-id="main-heading">Spicy Soups</h1>
+          <h1>Spicy Soups</h1>
       </Header>
 
       <Container>

@@ -14,25 +14,24 @@ import {
 
 
 const Order = ({ orderItems, setOrderItems }) => (
-	<OrderContainer  data-testid="order-summary">
-		<OrderHeader  data-testid="order-heading">Order</OrderHeader>
+	<OrderContainer>
+		<OrderHeader>Order</OrderHeader>
 		{orderItems &&
 			orderItems.map((item) => (
-				<OrderItems key={`order-${item.id}`}  data-testid="order-item">
-					<OrderName  data-testid={`order-name-${item.id}`}>
+				<OrderItems key={`order-${item.id}`}>
+					<OrderName>
 						<span role="img" aria-label="spice">
 							🌯
 						</span>
 						{item.name}
 						<span
 							className="order__spice"
-							 data-testid={`order-spice-${item.id}`}
 						>
 							{spiceEmoji(item.spice)}
 						</span>
 					</OrderName>
 					<OrderPrice>
-						<span  data-testid={`order-price-${item.id}`}>
+						<span>
 							₦{item.price * item.quantity}
 						</span>
 					</OrderPrice>
@@ -46,7 +45,7 @@ const Order = ({ orderItems, setOrderItems }) => (
 		{orderItems && orderItems.length > 0 ? (
 			<OrderHeadingTotal>
 				Total Price:
-				<span  data-testid="order-total">
+				<span>
 					₦
 					{orderItems.reduce(
 						(curr, val) => curr + val.price * val.quantity,
@@ -55,7 +54,7 @@ const Order = ({ orderItems, setOrderItems }) => (
 				</span>
 			</OrderHeadingTotal>
 		) : (
-			<OrderHeaderNothing  data-testid="order-heading-nothing">
+			<OrderHeaderNothing>
 				It looks like you have an empty stomach, order now!
 				<span role="img" aria-label="spice">
 					🌯🌯🌯

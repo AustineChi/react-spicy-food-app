@@ -6,7 +6,7 @@ import { Menu, MenuHeader, MenuItems } from "./Menu.styles";
 const MenuComponent = ({ meals, orderItems, setOrderItems }) => (
     <Menu className="menu">
         <MenuHeader>Menu</MenuHeader>
-        <MenuItems data-test-id="menu-items">
+        <MenuItems>
             {meals.map((item) => (
                 <Item
                     key={`${item.id}`}
