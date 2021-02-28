@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "Afang Soup",
+    "image": "/images/afang.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam et est ornare.",
+    "price": 500,
+    "available": true,
+    "spice": 1,
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Bitter Leaf Soup",
+    "image": "/images/bitter.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam et est ornare.",
+    "price": 700,
+    "available": true,
+    "spice": 2,
+    "quantity": 1
+
+  },
+  {
+    "id": 3,
+    "name": "Egusi Soup",
+    "image": "/images/egusi.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam et est ornare.",
+    "price": 800,
+    "available": true,
+    "spice": 1,
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "name": "Okro Soup",
+    "image": "/images/okro.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam et est ornare.",
+    "price": 900,
+    "available": true,
+    "spice": 3,
+    "quantity": 1
+
+  },
+  {
+    "id": 5,
+    "name": "Efo Riro Soup",
+    "image": "/images/efo-riro.jpeg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam et est ornare.",
+    "price": 800,
+    "available": true,
+    "spice": 3,
+    "quantity": 1
+
+  }
+]
