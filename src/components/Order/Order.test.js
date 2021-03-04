@@ -109,6 +109,8 @@ describe("<Order />", () => {
 		const { getByTitle } = render(
 			<Order orderItems={orderItems} setOrderItems={setOrderItems} />
 		);
-		expect(getByTitle("total price").innerHTML).toBe(`₦${expectedTotalPrice}`);
+		expect(getByTitle("total price").innerHTML).toBe(
+			`₦${expectedTotalPrice}`
+		);
 	});
 });

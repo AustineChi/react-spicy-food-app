@@ -68,7 +68,10 @@ const Order = ({ orderItems, setOrderItems }) => {
 				<OrderHeadingTotal title="order heading total">
 					Total Price:
 					<span title="total price">
-						{`₦${orderItems.reduce((curr, val) => curr + val.price * val.quantity, 0)}`}
+						{`₦${orderItems.reduce(
+							(curr, val) => curr + val.price * val.quantity,
+							0
+						)}`}
 					</span>
 				</OrderHeadingTotal>
 			) : (
