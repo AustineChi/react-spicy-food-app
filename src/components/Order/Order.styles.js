@@ -60,3 +60,4 @@ export const ControlBox = styled.div`
                 cursor: pointer
         }
 `;
+
