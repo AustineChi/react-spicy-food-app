@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup} from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Item from "./Item";
 import meals from "../../data.json";
