@@ -3,13 +3,15 @@ import { arrayOf, shape, func, string, number, bool } from "prop-types";
 import { spiceEmoji } from "../../App";
 import {
 	OrderContainer,
-	OrderItems,
+	OrderItem,
+	Item,
 	OrderName,
 	OrderPrice,
 	OrderHeader,
 	OrderHeadingTotal,
 	OrderHeaderNothing,
 	ControlBox,
+	OrderQuantity
 } from "./Order.styles";
 
 import { ReactComponent as PlusIcon } from "./assets/plus.svg";
@@ -41,28 +43,30 @@ const Order = ({ orderItems, setOrderItems }) => {
 			<OrderHeader>Order</OrderHeader>
 			{orderItems &&
 				orderItems.map((item) => (
-					<OrderItems
-						key={`order-${item.id}`}
-						title={`order-${item.id}`}
-					>
-						<OrderName>
-							<span role="img" aria-label="spice">
-								🌯
-							</span>
-							{item.name}
-							<span className="order__spice">
-								{spiceEmoji(item.spice)}
-							</span>
-						</OrderName>
-						<OrderPrice>
-							<span>{`₦${item.price * item.quantity}`}</span>
-						</OrderPrice>
-						<ControlBox>
-							<MinusIcon onClick={() => decrement(item)} />
-							<PlusIcon onClick={() => increment(item)} />
-							<DeleteIcon onClick={() => deleteItem(item)} />
-						</ControlBox>
-					</OrderItems>
+					<OrderItem key={`order-${item.id}`}>
+						<Item
+							title={`order-${item.id}`}
+						>
+							<OrderName>
+								<span role="img" aria-label="spice">
+									🌯
+								</span>
+								{item.name}
+								<span>{spiceEmoji(item.spice)}</span>
+							</OrderName>
+							<OrderPrice>
+								<span>{`₦${item.price * item.quantity}`}</span>
+							</OrderPrice>
+							<ControlBox>
+								<MinusIcon onClick={() => decrement(item)} />
+								<PlusIcon onClick={() => increment(item)} />
+								<DeleteIcon onClick={() => deleteItem(item)} />
+							</ControlBox>
+						</Item>
+						<OrderQuantity>
+							{`qauntity: ${item.quantity}`}
+						</OrderQuantity>
+					</OrderItem>
 				))}
 			{orderItems && orderItems.length > 0 ? (
 				<OrderHeadingTotal title="order heading total">

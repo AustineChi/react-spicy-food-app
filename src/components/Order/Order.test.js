@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup, fireEvent, waitFor } from "@testing-library/react";
+import { render, cleanup, fireEvent, waitFor, getAllByText } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 
 import "@testing-library/jest-dom";
@@ -18,7 +18,7 @@ describe("<Order />", () => {
 	});
 
 	it("should display order items", () => {
-		const { getByText } = render(
+		const { getByText, getAllByText } = render(
 			<Order orderItems={orderItems} setOrderItems={setOrderItems} />
 		);
 
@@ -26,20 +26,24 @@ describe("<Order />", () => {
 		const orderItemOnePrice = getByText(
 			`₦${orderItems[0].price * orderItems[0].quantity}`
 		);
+		const orderItemOneQuantity = getAllByText(`qauntity: ${orderItems[0].quantity}`)[0];
 		const orderItemOneChilly = getByText("🌶️");
 		const orderItemTwoName = getByText(orderItems[1].name);
 		const orderItemTwoPrice = getByText(
 			`₦${orderItems[1].price * orderItems[1].quantity}`
 		);
+		const orderItemTwoQuantity = getAllByText(`qauntity: ${orderItems[1].quantity}`)[1]
 		const orderItemTwoChilly = getByText("🌶️🌶️");
 		const title = getByText("Order");
 
 		expect(orderItemOneName).toBeVisible();
 		expect(orderItemOnePrice).toBeVisible();
 		expect(orderItemOneChilly).toBeVisible();
+		expect(orderItemOneQuantity).toBeVisible();
 		expect(orderItemTwoName).toBeVisible();
 		expect(orderItemTwoPrice).toBeVisible();
 		expect(orderItemTwoChilly).toBeVisible();
+		expect(orderItemTwoQuantity).toBeVisible();
 		expect(title).toBeVisible();
 	});
 
