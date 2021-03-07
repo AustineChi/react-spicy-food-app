@@ -2,7 +2,7 @@
   "name": "react-testing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://austinechi.github.io/react-spicy-food-app",
+  "homepage": "https://austinechi.github.io/react-spicy-food-app/",
   "dependencies": {
     "gh-pages": "^3.1.0",
     "i": "^0.3.6",
