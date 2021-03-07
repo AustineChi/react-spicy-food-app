@@ -2,6 +2,7 @@
   "name": "react-testing",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://austinechi.github.io/react-spicy-food-app",
   "dependencies": {
     "i": "^0.3.6",
     "node-sass": "^4.13.0",
